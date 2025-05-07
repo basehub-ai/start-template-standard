@@ -6,7 +6,7 @@ import doQueue from "@opennextjs/cloudflare/overrides/queue/do-queue"
 
 export default defineCloudflareConfig({
   incrementalCache: withRegionalCache(r2IncrementalCache, {
-    mode: "short-lived",
+    mode: "long-lived",
   }),
   queue: doQueue,
   // This is only required if you use On-demand revalidation
