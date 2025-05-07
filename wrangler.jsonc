@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "main": ".open-next/worker.js",
-  "name": "deleteme4",
+  "name": "start-template-standard",
   "compatibility_date": "2024-12-30",
   "account_id": "25221ed6ab55499e1a7345754b342078",
   "compatibility_flags": [
