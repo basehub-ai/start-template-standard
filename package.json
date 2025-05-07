@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"basehub dev\" \"next dev --turbopack\"",
-    "build": "basehub build && next build",
+    "dev": "concurrently \"npm run generate:dev -- --watch\" \"next dev --turbopack\"",
+    "build": "npm run generate:build && next build",
+    "generate:dev": "basehub --draft",
+    "generate:build": "basehub",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "basehub": "^8.2.0",
@@ -23,7 +27,11 @@
     "concurrently": "^9.1.2",
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
+    "prettier": "^3.5.3",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "prettier": {
+    "semi": false
   }
 }
